@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>CadastroHerois</title>
+
+</head>
+
+<body>
+
+<h1> Cadastro de Herois<h1> 
+
+<form method= "get" action="/heroi/salvar">
+
+Nome: <input type="text" name="nome"/><br>
+Classe: <input type="text" name="classe"/>
+Ranking: <input type="text" name="ranking"/><br>
+Poder: <input type="text" name="poder"/>
+<br>
+<br>
+
+<button th:if="${heroi.codigo == null}" th:text="Cadastrar"> </button>
+<!--<input type="submit" value="Cadastrar">-->
+
+<button th:if="${heroi.codigo != null}" th:text="Atualizar"> </button>
+
+
+</form>
+
+<src="/js/bootstrap.min.js"/> 
+<br>
+<input type="submit" value="Cadastrar" />
+</body>
+
+</html>
